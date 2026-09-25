@@ -13,7 +13,8 @@ const ExerciseCard = ({ exercise }: ExerciseCardProps) => {
         src={exercise.image}
         alt={exercise.name}
         width={500}
-        height={300}
+        height={250}
+        className="w-full h-[200px] object-cover rounded-t-lg"
       />
 
       <div className="p-4">

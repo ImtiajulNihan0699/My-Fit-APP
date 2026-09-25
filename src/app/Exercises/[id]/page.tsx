@@ -20,6 +20,8 @@ const ExerciseDetails = async ({
 
   const exercise = await getExercise(id);
 
+  
+
   return <DetailsCard exercise={exercise} />;
 };
 

@@ -1,3 +1,4 @@
+
 import { IExercise } from "@/app/types/type";
 import Image from "next/image";
 
