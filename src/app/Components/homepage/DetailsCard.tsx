@@ -1,6 +1,8 @@
 
 import { IExercise } from "@/app/types/type";
 import Image from "next/image";
+import PlannedButton from "../DetailsCardButtons/PlannedButton";
+import SavedButton from "../DetailsCardButtons/SavedButton";
 
 interface DetailsCardProps {
   exercise: IExercise;
@@ -132,13 +134,9 @@ const DetailsCard = ({ exercise }: DetailsCardProps) => {
 
           {/* Buttons */}
           <div className="flex gap-3 mt-7">
-            <button className="bg-lime-400 text-black px-5 py-2 rounded-md text-sm font-medium">
-              Add to today&apos;s plan
-            </button>
+            <PlannedButton exercise={exercise} />
 
-            <button className="border border-gray-700 px-5 py-2 rounded-md text-sm text-gray-300">
-              Save for later
-            </button>
+            <SavedButton exercise={exercise} />
           </div>
 
         </div>
