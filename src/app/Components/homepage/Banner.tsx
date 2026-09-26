@@ -1,42 +1,48 @@
 import Image from "next/image";
-import bannerImage from "@/assets/banner.png";
+import banner from "@/assets/banner.png";
+import BannerButton from "./BannerButton";
 
 const Banner = () => {
   return (
-    <section className="w-full px-4 py-8 bg-black">
-      <div className="container mx-auto w-full min-h-[275px] rounded-xl border border-gray-800 bg-[#15171D] flex flex-col md:flex-row items-center justify-between px-8 md:px-10 py-8 overflow-hidden">
-        {/* Left side */}
-        <div className="max-w-xl">
-          <p className="text-[#C2F800] text-[9px] font-semibold tracking-wide mb-4">
-            WORKOUT LIBRARY
-          </p>
+    <section className="bg-black px-4 py-8">
+      <div className="container mx-auto">
+        <div className="relative overflow-hidden rounded-xl border border-[#252A33] bg-[#15171D]">
+          <div className="grid min-h-[270px] items-center md:grid-cols-2">
+            
+            {/* Content */}
+            <div className="px-8 py-10 md:px-10">
+              <p className="mb-4 text-[9px] font-bold tracking-wide text-[#C2F800]">
+                WORKOUT LIBRARY
+              </p>
 
-          <h1 className="text-white text-4xl md:text-4xl font-black leading-[0.9] tracking-tight max-w-lg">
-            TRAIN WITH INTENT. LOG
-            <br />
-            EVERY SET.
-          </h1>
+              <h1 className="max-w-xl text-4xl font-extrabold leading-[0.95] text-white md:text-5xl">
+                TRAIN WITH INTENT. LOG
+                <br />
+                EVERY SET.
+              </h1>
 
-          <p className="text-gray-400 text-xs md:text-sm leading-5 mt-4 max-w-md">
-            FitLog is a dark, no-nonsense gym companion: pick a lift, lock it{" "}
-            <br />
-            into today&apos;s plan, and watch the week&apos;s work add up.
-          </p>
+              <p className="mt-4 max-w-md text-xs leading-5 text-gray-400">
+                FitLog is a dark, no-nonsense gym companion: pick a lift, lock
+                it into today's plan, and watch the week's work add up.
+              </p>
 
-          <button className="mt-5 bg-[#C2F800] text-black text-[9px] font-bold px-4 py-2.5 rounded-md hover:bg-[#b5e800] transition">
-            BROWSE WORKOUTS
-          </button>
-        </div>
+              <div className="mt-5">
+                <BannerButton />
+              </div>
+            </div>
 
-        {/* Right side - Banner image */}
-        <div className="flex items-center justify-center mt-6 md:mt-0">
-          <Image
-            src={bannerImage}
-            alt="Workout illustration"
-            width={300}
-            height={260}
-            className="object-contain"
-          />
+            {/* Banner Image */}
+            <div className="relative h-[260px] md:h-[300px]">
+              <Image
+                src={banner}
+                alt="Workout"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
