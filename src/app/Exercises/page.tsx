@@ -12,6 +12,7 @@ const Exercises = async () => {
   return (
     <>
     <div className="w-full px-4 py-8 bg-black">
+      <div className="container mx-auto">
       <h2 className="my-5 mx-5 text-white text-2xl font-bold mb-5">THE LIBRARY</h2>
       <p className="mx-5 text-gray-400">
         Twelve lifts covering every major muscle group.
@@ -20,6 +21,7 @@ const Exercises = async () => {
         {exercises.map((exercise) => (
           <ExerciseCard key={exercise.id} exercise={exercise} />
         ))}
+      </div>
       </div>
     </div>
     </>

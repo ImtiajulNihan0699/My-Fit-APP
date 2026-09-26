@@ -4,7 +4,7 @@ import bannerImage from "@/assets/banner.png";
 const Banner = () => {
   return (
     <section className="w-full px-4 py-8 bg-black">
-      <div className="w-full min-h-[275px] rounded-xl border border-gray-800 bg-[#15171D] flex flex-col md:flex-row items-center justify-between px-8 md:px-10 py-8 overflow-hidden">
+      <div className="container mx-auto w-full min-h-[275px] rounded-xl border border-gray-800 bg-[#15171D] flex flex-col md:flex-row items-center justify-between px-8 md:px-10 py-8 overflow-hidden">
         {/* Left side */}
         <div className="max-w-xl">
           <p className="text-[#C2F800] text-[9px] font-semibold tracking-wide mb-4">

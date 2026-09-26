@@ -23,39 +23,38 @@ const TotalDisplay = () => {
   );
 
   return (
-    <div>
-      <h3 className="text-xl font-semibold mb-4">
-        Today's Summary
-      </h3>
+    <div className="w-full rounded-xl border border-[#252A33] bg-[#14171D] px-4 py-5">
+      <div className="grid grid-cols-3">
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-        <div>
-          <p className="text-sm text-gray-500">
-            Total Exercises
+        {/* Exercises */}
+        <div className="px-4">
+          <p className="text-xs text-gray-400">
+            Exercises
           </p>
 
-          <p className="text-2xl font-bold">
+          <p className="mt-1 text-2xl font-bold text-[#C2F800]">
             {totalExercises}
           </p>
         </div>
 
-        <div>
-          <p className="text-sm text-gray-500">
-            Total Minutes
+        {/* Minutes */}
+        <div className="border-l border-[#252A33] px-6">
+          <p className="text-xs text-gray-400">
+            Minutes
           </p>
 
-          <p className="text-2xl font-bold">
+          <p className="mt-1 text-2xl font-bold text-white">
             {totalMinutes}
           </p>
         </div>
 
-        <div>
-          <p className="text-sm text-gray-500">
-            Total Calories
+        {/* Calories */}
+        <div className="border-l border-[#252A33] px-6">
+          <p className="text-xs text-gray-400">
+            Calories
           </p>
 
-          <p className="text-2xl font-bold">
+          <p className="mt-1 text-2xl font-bold text-white">
             {totalCalories}
           </p>
         </div>

@@ -1,9 +1,12 @@
 import React from "react";
 import TotalDisplay from "../Components/MyPlanComponents/TotalDisplay";
+import TodaysPlanTab from "../Components/MyPlanTabs/TodaysPlanTab";
+import SavedTab from "../Components/MyPlanTabs/SavedTab";
 
 const MyPlan = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="bg-black px-4 py-8">
+      <div className="container mx-auto">
 
       {/* Page Header */}
       <div className="mb-8">
@@ -31,7 +34,7 @@ const MyPlan = () => {
         />
 
         <div className="tab-content bg-base-100 border-base-300 p-6">
-          Tab content 1
+          <TodaysPlanTab /> 
         </div>
 
         {/* Saved */}
@@ -44,9 +47,10 @@ const MyPlan = () => {
         />
 
         <div className="tab-content bg-base-100 border-base-300 p-6">
-          Tab content 2
+          <SavedTab />
         </div>
 
+      </div>
       </div>
     </div>
   );
