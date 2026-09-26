@@ -3,7 +3,7 @@ import DetailsCard from "@/app/Components/homepage/DetailsCard";
 
 const getExercise = async (id: string): Promise<IExercise> => {
   const response = await fetch(
-    `https://api.abcz.workers.dev/api/fitlog/${id}`
+    `https://api.api-store.workers.dev/api/fitlog/${id}`
   );
 
   const data = await response.json();

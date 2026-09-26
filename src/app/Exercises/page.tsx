@@ -1,10 +1,9 @@
-import React from "react";
 import { IExercise } from "../types/type";
 import ExerciseCard from "../Components/homepage/ExerciseCard";
 
 const getExercises = async (): Promise<IExercise[]> => {
   const response = await fetch(
-    "https://api.abcz.workers.dev/api/fitlog"
+    "https://api.api-store.workers.dev/api/fitlog"
   );
 
   const data = await response.json();
@@ -21,6 +20,7 @@ const Exercises = async () => {
       className="scroll-mt-20 w-full bg-black px-4 py-8"
     >
       <div className="container mx-auto">
+
         <h2 className="mx-5 my-5 text-2xl font-bold text-white">
           THE LIBRARY
         </h2>
@@ -37,6 +37,7 @@ const Exercises = async () => {
             />
           ))}
         </div>
+
       </div>
     </section>
   );
